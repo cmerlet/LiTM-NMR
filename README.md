@@ -9,16 +9,16 @@
 * To execute the program, you have to launch it with an input file giving the following 
 information (./program < inputfile):
 
-- 1st line: name of the xyz file with the initial positions of a P4332 structure of LiTi1.5Mn0.54 (> name)
+1. name of the xyz file with the initial positions of a P4332 structure of LiTi1.5Mn0.54 (> name)
 
-- 2nd line: length of the box in all dimensions (> Lx, Ly, Lz)
+2. length of the box in all dimensions (> Lx, Ly, Lz)
 
-3rd line: number of periodic images in all dimensions (> Nx, Ny, Nz)
+3. number of periodic images in all dimensions (> Nx, Ny, Nz)
 
-4th line: seed for the random operations and unconstrained/constrained (> seed, Ea_const)
+4. seed for the random operations and unconstrained/constrained (> seed, Ea_const)
 0 for unconstrained, Ea in eV for constrained (constrained = no diamagnetic Li, no negative shifts, no Li with a Mn3+ in oct)
 
-5th line: fraction of Mn in the system (> xMn)
+5. fraction of Mn in the system (> xMn)
 
 6th line: chemical shifts you want to use (> shifttype) 
 e.g. HYB20, HYB35, AVDFT, AVmodif, AVdynam 
