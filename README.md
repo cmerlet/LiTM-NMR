@@ -4,14 +4,14 @@
 
 * To compile the program, you can use any c compiler, e.g.:
 
-gcc -o LiTM-NMR.x LiTM-NMR.c -lm 
+.center[gcc -o LiTM-NMR.x LiTM-NMR.c -lm]
 
 * To execute the program, you have to launch it with an input file giving the following 
 information (./program < inputfile):
 
-1st line: name of the xyz file with the initial positions of a P4332 structure of LiTi1.5Mn0.54 (> name)
+- 1st line: name of the xyz file with the initial positions of a P4332 structure of LiTi1.5Mn0.54 (> name)
 
-2nd line: length of the box in all dimensions (> Lx, Ly, Lz)
+- 2nd line: length of the box in all dimensions (> Lx, Ly, Lz)
 
 3rd line: number of periodic images in all dimensions (> Nx, Ny, Nz)
 
