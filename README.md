@@ -4,7 +4,7 @@
 
 * To compile the program, you can use any c compiler, e.g.:
 
-`gcc -o LiTM-NMR.x LiTM-NMR.c -lm`
+      `gcc -o LiTM-NMR.x LiTM-NMR.c -lm`
 
 * To execute the program, you have to launch it with an input file giving the following 
 information (./program < inputfile):
@@ -17,13 +17,15 @@ information (./program < inputfile):
 
 4. seed for the random operations and unconstrained/constrained (> seed, Ea_const)
 
-0 for unconstrained, Ea in eV for constrained (constrained = no diamagnetic Li, no negative shifts, no Li with a Mn3+ in oct)
+    0 for unconstrained, Ea in eV for constrained (constrained = no diamagnetic Li, no negative shifts, no Li with a Mn3+ in oct)
 
 5. fraction of Mn in the system (> xMn)
 
 6. chemical shifts you want to use (> shifttype) 
-e.g. HYB20, HYB35, AVDFT, AVmodif, AVdynam 
---- Note that AVdynam only makes sense for x=1.0 to x=2.0. ---
+
+    e.g. HYB20, HYB35, AVDFT, AVmodif, AVdynam 
+    
+    --- Note that AVdynam only makes sense for x=1.0 to x=2.0. ---
 
 7. gaussian widths for the model NMR spectrum (> gwidth for P4332, gwidth2 for Fd3m)
 Note that for x>1.0 and x<=2.0, the two phases are Fd3m
