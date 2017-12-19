@@ -6,48 +6,56 @@
 
       `gcc -o LiTM-NMR.x LiTM-NMR.c -lm`
 
-* To execute the program, you have to launch it with an input file giving the following 
-information (./program < inputfile):
+* To execute the program, you just have to do:
 
-1. name of the xyz file with the initial positions of a P4332 structure of LiTi1.5Mn0.54 (> name)
+      `./program < inputfile`
 
-2. length of the box in all dimensions (> Lx, Ly, Lz)
+* The input file contains the following information:
 
-3. number of periodic images in all dimensions (> Nx, Ny, Nz)
+1. Name of the xyz file with the initial positions of a P4332 structure of LiTi1.5Mn0.54 
 
-4. seed for the random operations and unconstrained/constrained (> seed, Ea_const)
+2. Length of the box in all dimensions 
 
-    0 for unconstrained, Ea in eV for constrained (constrained = no diamagnetic Li, no negative shifts, no Li with a Mn3+ in oct)
+3. Number of periodic images in all dimensions 
 
-5. fraction of Mn in the system (> xMn)
+4. Seed for the random operations, and 0 or 1 for unconstrained/constrained
 
-6. chemical shifts you want to use (> shifttype) 
+    0 for unconstrained
+    Ea in eV for constrained (constrained = no diamagnetic Li, no negative shifts, no Li with a Mn3+ in oct)
 
-    e.g. HYB20, HYB35, AVDFT, AVmodif, AVdynam 
-    
-    --- Note that AVdynam only makes sense for x=1.0 to x=2.0. ---
+5. Fraction of Mn in the system
 
-7. gaussian widths for the model NMR spectrum (> gwidth for P4332, gwidth2 for Fd3m)
-Note that for x>1.0 and x<=2.0, the two phases are Fd3m
+6. Chemical shifts you want to use
 
-8. window and step to plot the NMR spectrum (> smin, smax, dshift2)
+    e.g. HYB20, HYB35, AVDFT, AVmodif, AVdynam
+    Note that AVdynam only makes sense for x=1.0 to x=2.0. ---
 
-9. fraction of Ti-rich region (P4332 region) and fraction of Mn in this region (> pfrac, pxMn)
+7. Gaussian widths for the model NMR spectrum
 
-10. fraction of Mn tet sites and fraction of Ti in tet site for the first region (> invfrac1, invfracTi1)
---- Note that for Mn>1.0, it is believed that only Ti4+ goes into tet sites, so 1st should probably be 0 ---
---- Note that the fraction of Li in oct sites is the sum of these two fractions ---
+   Note that for x>1.0 and x<=2.0, the two phases are Fd3m
 
-11. fraction of Mn in tet sites and fraction of Ti in tet site for the second region (> invfrac2, invfracTi2)
---- Note that for Mn>1.0, it is believed that only Ti4+ goes into tet sites, so 1st should probably be 0 ---
---- Note that the fraction of Li in oct sites is the sum of these two fractions ---
+8. Window and step to plot the NMR spectrum
 
-12. number of steps of additional swaps (> Nequil1, Nequil2, Nequil3) 
-Nequil1 is for Lioct/MnOct/Tioct swaps before the main swaps
---- This allows one to switch from P4332 to Fd3m in the Ti-poor region ---
---- Note that for Mn>1.0, both regions are Fd3m by construction ---
-Nequil2 is for Lioct/MnOct/Tioct swaps after the main swaps
-Nequil3 is for Lioct/Tioct swaps after the main swaps 
+9. Fraction of Ti-rich region (P4332 region) and fraction of Mn in this region
 
-13. fraction of Mn3+ replaced by Mn2+/Mn4+ in oct sites (> oxredfrac)
-For now, this is done independently of the Ti-rich / Ti-poor regions.
+10. Fraction of Mn tet sites and fraction of Ti in tet site for the first region
+
+   Note that for Mn>1.0, it is believed that only Ti4+ goes into tet sites, so 1st should probably be 0
+   Note that the fraction of Li in oct sites is the sum of these two fractions
+
+11. fraction of Mn in tet sites and fraction of Ti in tet site for the second region
+
+   Note that for Mn>1.0, it is believed that only Ti4+ goes into tet sites, so 1st should probably be 0
+   Note that the fraction of Li in oct sites is the sum of these two fractions
+
+12. number of steps of additional swaps
+
+   Nequil1 is for Lioct/MnOct/Tioct swaps before the main swaps
+   This allows one to switch from P4332 to Fd3m in the Ti-poor region
+   Note that for Mn>1.0, both regions are Fd3m by construction
+   Nequil2 is for Lioct/MnOct/Tioct swaps after the main swaps
+   Nequil3 is for Lioct/Tioct swaps after the main swaps 
+
+13. fraction of Mn3+ replaced by Mn2+/Mn4+ in oct sites
+   
+   For now, this is done independently of the Ti-rich / Ti-poor regions.
