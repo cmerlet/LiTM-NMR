@@ -1,9 +1,6 @@
 # LiTM-NMR
 
-* Program calculating model NMR spectra for Li ions in LiMn(x)Ti(2-x)O4 according to Mn-O-Li pathways obtained through DFT 
-and mean field evaluations of scaling factors
-
-This program can be used for x = 0.5 to x = 2.0
+* Program calculating model NMR spectra for Li ions in LiMn(x)Ti(2-x)O4 according to Mn-O-Li pathways obtained through DFT and mean field evaluations of scaling factors. This program can be used for x = 0.5 to x = 2.0.
 
 * To compile the program, you can use any c compiler, e.g.:
 
